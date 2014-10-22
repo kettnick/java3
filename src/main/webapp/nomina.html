@@ -11,12 +11,49 @@
         <link rel="stylesheet" href="js/libs/twitter-bootstrap/css/bootstrap.css">
         <script src="js/libs/twitter-bootstrap/js/bootstrap.js"></script>
         <link rel="stylesheet" href="mi-estilo.css">
+        <script>
+            $(documento).ready(function(){
+                $("#Guardar-trabajador").click(function(){
+                    $.ajax({
+                        url: 'guardar-trabajador',
+                        method: 'post',
+                        data:{
+                            nombre:$("#Nombre").val(),
+                            paterno:$("#Paterno").val(),
+                            mateno:$("#Materno").val(),
+                        },
+                        success:function(resultado){
+                            $("#resultado-guardar-trabajador").html(resultado);
+                        }
+                    });
+                });
+            });
+        </script>
         
     </head>
     <body>
-        <h1>Proyecto Nominas</h1>
+        
+        <div class="row">
+       
+            <div class="col-lg-3">    
+                <label>Nombre</label>
+            </div>
+            
+            <div class="col-lg-3">
+                <input type="text" class="form-control" id="nombre"/>
+            </div>
+            
+        </div>
+        
+        <label>A.paterno</label>
+        <input type="text" class="form-control" id="paterno"/>
+        <label>A.materno</label>
+        <input type="text" class="form-control" id="materno"/>
+        <a id="guardar-trabajador" class="btn btn-default">Guardar Trabajador</a>
+        <div id="resultado-guardar-trabajor"></div>
+       <!-- <h1>Proyecto Nominas</h1>
         <p>Oprime el sig. boton para ver la nomina</p>
         <a href="#" class="btn mi-color">Ver nomina</a>
-        <div id="resultado"></div>
+        <div id="resultado"></div> !-->
     </body>
 </html>
