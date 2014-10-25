@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package qc.hj.proyecto1.controller;
+package qc.hj.proyecto1.model;
 
 import java.io.IOException;
 import java.io.PrintWriter;
