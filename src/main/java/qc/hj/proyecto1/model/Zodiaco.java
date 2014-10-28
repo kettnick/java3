@@ -62,9 +62,16 @@ public class Zodiaco implements Esoterica{
     }
     
     public String futuro(String parametro) {
+       String futuroT = "";
        
-        for()
+        for(Signos s:signo){
+            if(parametro.equalsIgnoreCase(s.getSigno())){
+            futuroT= s.getPrediccion();
         
+            }
+        } 
+        
+        return futuroT;
     }
     
     
