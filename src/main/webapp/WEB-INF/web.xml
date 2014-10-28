@@ -9,6 +9,10 @@
         <servlet-name>ServeltGuardarUsuario</servlet-name>
         <servlet-class>qc.hj.proyecto1.controller.ServeltGuardarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletActualizarTrabajador</servlet-name>
+        <servlet-class>qc.hj.proyecto1.controller.ServletActualizarTrabajador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletBuscarHoroscopo</servlet-name>
         <url-pattern>/horoscopo.xls</url-pattern>
@@ -16,6 +20,10 @@
     <servlet-mapping>
         <servlet-name>ServeltGuardarUsuario</servlet-name>
         <url-pattern>/guardar-trabajador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletActualizarTrabajador</servlet-name>
+        <url-pattern>/ServletActualizarTrabajador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
