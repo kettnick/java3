@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletBuscarHoroscopo extends HttpServlet {
 
     
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) //solo lleva dos métodos (request "pide info"  /  response "responde")
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -27,8 +28,12 @@ public class ServletBuscarHoroscopo extends HttpServlet {
         PrintWriter out= response.getWriter();
         String nombre = request.getParameter("nombre");
         String signo = request.getParameter("signo");
-        out.println("Bienvenida Putita :D " + nombre +" a mi servlet" +signo);
-      
+        
+        Pitoniza pito = new Pitoniza (new Zodiaco());
+       
+        out.println("Bienvenida Putita :D " + nombre +" a mi servlet " +signo);
+        out.println("Tu horoscopo es: " + pito.obtenerFuturo(signo));
+        
         
     }
 }

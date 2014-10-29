@@ -3,7 +3,7 @@
     <display-name>maven-mvc</display-name>
     <servlet>
         <servlet-name>ServletBuscarHoroscopo</servlet-name>
-        <servlet-class>qc.hj.proyecto1.controller.ServletBuscarHoroscopo</servlet-class>
+        <servlet-class>qc.hj.proyecto1.model.ServletBuscarHoroscopo</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServeltGuardarUsuario</servlet-name>
