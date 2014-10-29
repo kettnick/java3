@@ -12,7 +12,8 @@
         <form action="horoscopo.xls" method="post" >
             <p> escribe tu nombre</p>
             <input type="text" name="nombre"/><br>
-            <select name="signo">
+            <select name="signo"> 
+                <!-- Para la lista desplegable -->
                 <option>Sagitario</option>
                 <option>Libra</option>
                 <option>Acuario</option>
@@ -30,6 +31,23 @@
             
         </form>
            
+        <h1> Chistes </h1>
+        <form action="horoscopo.xls" method="post">
+            <p> Escoge tu tipo de chiste </p>
+            <select name="chistes">
+                
+                <option>Animales</option>
+                <option>Profesiones</option>
+                <option>Personajes</option>
+                <option>Cortos</option>
+                <option>Ingenieros</option>
+                <option>Estudiantes</option>
+                <option>Amigas</option>
+            </select>
+            
+            
+        </form>
+        
         
     </body>
 </html>
