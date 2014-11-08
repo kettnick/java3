@@ -5,10 +5,7 @@
  */
 package qc.hj.proyecto1.controller;
 
-/**
- *
- * @author T107
- */
+
 public class ProbarAreas {
     
     static ServicioSuperficie superficie;
@@ -16,6 +13,7 @@ public class ProbarAreas {
    
     public static void main(String[] args) {
         
+        ServicioSuperficie superficie = new ServicioSuperficie();
         System.out.println(superficie.servicioArea());
         
     }

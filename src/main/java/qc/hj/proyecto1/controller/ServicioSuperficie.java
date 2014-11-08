@@ -23,8 +23,10 @@ public class ServicioSuperficie {
     }
     
     public String servicioArea(){
-        
-        return superficie.calacularArea();
+       
+        Cuadrado d= new Cuadrado();
+        d.setLado(5);
+        return d.calacularArea();
     }
     
 }
