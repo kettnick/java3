@@ -1,4 +1,4 @@
-
+/*
 package qc.hj.controller;
 
 import qc.hj.controller.Direccion;
@@ -30,3 +30,4 @@ public class GenerarUsuarios {
         
     }
 }
+*/

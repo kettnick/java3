@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package qc.hj.controller;
+/*package qc.hj.controller;
 
 import java.io.IOException;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -35,4 +35,4 @@ public class ControladorHola {
         return mapper.writeValueAsString(GenerarUsuarios.obtenerUsuario());
         
     }
-}
+}*/
