@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("qc.hj.proyecto1.controller")
+@ComponentScan("qc.hj.controller")
 public class WebApConfig extends WebMvcConfigurerAdapter{
     
     

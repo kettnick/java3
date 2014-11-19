@@ -1,14 +1,49 @@
-/*
+
 package qc.hj.controller;
 
-import qc.hj.controller.Direccion;
+
 import java.util.ArrayList;
+import qc.hj.proyecto1.controller.Usuario;
 
 
 public class GenerarUsuarios {
     
-    public static ArrayList<Usuario> obtenerUsuario() {
+    public static String obtenerUsuario() throws Exception {
+      DAOUsuarioImpl du = new DAOUsuarioImpl();
+      
+      return du.obtenerTodos();
+     
+    }
+}
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
         
         //Primero creamos tres direcciones
@@ -31,3 +66,7 @@ public class GenerarUsuarios {
     }
 }
 */
+        
+        
+        
+        
