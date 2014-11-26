@@ -13,6 +13,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import qc.hj.proyecto1.controller.HibernateUtilidades;
 import qc.hj.proyecto1.controller.Usuario;
 
@@ -39,4 +40,17 @@ public class DAOUsuarioImpl {
     }
     
     
+    public String obtenerUsuarioPorId() throws Exception{
+    SessionFactory factory = HibernateUtilidades.getSessionFactory();
+    Session sesion = factory.openSession();
+    Transaction tranza = sesion.beginTransaction();
+    
+      Criteria cri = sesion.createCriteria(Usuario.class).add(Restrictions.idEq(1));
+      Usuario u = (Usuario) cri.uniqueResult();
+      tranza.commit();
+      sesion.close();
+      
+      ObjectMapper mapper = new ObjectMapper();
+      return mapper.writeValueAsString(u);
+}
 }
