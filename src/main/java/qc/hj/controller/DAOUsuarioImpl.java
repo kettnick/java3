@@ -8,11 +8,14 @@ package qc.hj.controller;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
+
 import org.codehaus.jackson.map.ObjectMapper;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import static org.hibernate.criterion.Projections.id;
 import org.hibernate.criterion.Restrictions;
 import qc.hj.proyecto1.controller.HibernateUtilidades;
 import qc.hj.proyecto1.controller.Usuario;
@@ -40,13 +43,19 @@ public class DAOUsuarioImpl {
     }
     
     
-    public String obtenerUsuarioPorId() throws Exception{
+    public String obtenerUsuarioPorId(Integer id) throws Exception{
     SessionFactory factory = HibernateUtilidades.getSessionFactory();
     Session sesion = factory.openSession();
     Transaction tranza = sesion.beginTransaction();
     
+        
       Criteria cri = sesion.createCriteria(Usuario.class).add(Restrictions.idEq(1));
-      Usuario u = (Usuario) cri.uniqueResult();
+      Usuario u = (Usuario) cri.uniqueResult(); //con Criteria
+   
+      //hql
+      Query cuerito = sesion.createQuery("from Usuario as usuario where id=?");
+      Usuario u2 = (Usuario) cuerito.setInteger(0, id).uniqueResult();
+     
       tranza.commit();
       sesion.close();
       

@@ -33,6 +33,6 @@ public class ControladorHola {
         @RequestMapping(value="/usuario/id", method=RequestMethod.GET,headers={"Accept=Application/json"})
          public @ResponseBody String hola(@PathVariable Integer id)throws Exception{
          DAOUsuarioImpl du = new DAOUsuarioImpl();
-         return du.obtenerUsuarioPorId();
+         return du.obtenerUsuarioPorId(id);
 } 
 }
